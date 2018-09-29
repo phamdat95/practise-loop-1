@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var valueMin = parseInt(prompt('nhập giới hạn nhỏ nhất:'));
+    var valueMax = parseInt(prompt('Nhập giới hạn lớn nhất:'));
+    var random = Math.random();
+    var randomNumber = Math.floor((valueMax - valueMin)*random + valueMin);
+    var i;
+    for (i=0;i<3;i++){
+        var yourValue = parseInt(prompt('nhập số bạn đoán:'));
+        if(yourValue===randomNumber){
+            alert('congratulation');
+            break;
+        } else if (yourValue<randomNumber)
+            alert('your number is less than computer number!');
+        else alert('your number is greater than computer number!');
+    }
+    alert(randomNumber);
+</script>
+</body>
+</html>
